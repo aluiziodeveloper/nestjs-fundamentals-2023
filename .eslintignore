@@ -1,0 +1,6 @@
+node_modules
+.docker/*
+coverage
+dist
+build
+/*.js
