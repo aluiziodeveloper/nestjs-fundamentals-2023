@@ -90,4 +90,15 @@ describe('CoursesController e2e tests', () => {
       )
     })
   })
+
+  describe('GET /courses/:id', () => {
+    it('should gets a course by id', async () => {
+      const res = await request(app.getHttpServer())
+        .get(`/courses/${courses[0].id}`)
+        .expect(200)
+      expect(res.body.id).toEqual(courses[0].id)
+      expect(res.body.name).toEqual(courses[0].name)
+      expect(res.body.description).toEqual(courses[0].description)
+    })
+  })
 })
