@@ -4,7 +4,7 @@ export class CreateCoursesTagsTable1695042750118 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'courses_tags',
+        name: 'courses_tags_tags',
         columns: [
           {
             name: 'id',
@@ -24,6 +24,6 @@ export class CreateCoursesTagsTable1695042750118 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('courses_tags')
+    await queryRunner.dropTable('courses_tags_tags')
   }
 }
